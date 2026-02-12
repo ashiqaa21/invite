@@ -86,23 +86,6 @@
   }
 }
 
-/* Curtain animation */
-@keyframes curtain-left {
-  from { transform: translateX(0); }
-  to { transform: translateX(-100%); }
-}
-@keyframes curtain-right {
-  from { transform: translateX(0); }
-  to { transform: translateX(100%); }
-}
-
-.curtain-open-left {
-  animation: curtain-left 1.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-}
-.curtain-open-right {
-  animation: curtain-right 1.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-}
-
 /* Scratch canvas */
 .scratch-canvas {
   cursor: pointer;
