@@ -1,9 +1,42 @@
 import { useRef, useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 
+interface ConfettiPiece {
+  id: number;
+  x: number;
+  y: number;
+  rotation: number;
+  scale: number;
+  color: string;
+  delay: number;
+  drift: number;
+}
+
+const CONFETTI_COLORS = [
+  "hsl(0, 55%, 35%)",
+  "hsl(38, 60%, 55%)",
+  "hsl(150, 15%, 22%)",
+  "hsl(38, 35%, 85%)",
+  "hsl(0, 55%, 50%)",
+  "hsl(38, 50%, 70%)",
+];
+
+const createConfetti = (count: number): ConfettiPiece[] =>
+  Array.from({ length: count }, (_, i) => ({
+    id: i,
+    x: Math.random() * 100,
+    y: -10 - Math.random() * 20,
+    rotation: Math.random() * 360,
+    scale: 0.5 + Math.random() * 0.8,
+    color: CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)],
+    delay: Math.random() * 0.8,
+    drift: (Math.random() - 0.5) * 40,
+  }));
+
 const DateReveal = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [revealed, setRevealed] = useState(false);
+  const [confetti, setConfetti] = useState<ConfettiPiece[]>([]);
   const isDrawing = useRef(false);
   const revealedPixels = useRef(0);
 
@@ -30,6 +63,11 @@ const DateReveal = () => {
     initCanvas();
   }, [initCanvas]);
 
+  const triggerConfetti = () => {
+    setConfetti(createConfetti(60));
+    setTimeout(() => setConfetti([]), 4000);
+  };
+
   const scratch = (x: number, y: number) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -42,8 +80,9 @@ const DateReveal = () => {
     ctx.fill();
 
     revealedPixels.current += 1;
-    if (revealedPixels.current > 40) {
+    if (revealedPixels.current > 40 && !revealed) {
       setRevealed(true);
+      triggerConfetti();
     }
   };
 
@@ -74,7 +113,33 @@ const DateReveal = () => {
   };
 
   return (
-    <section className="py-24 px-6 bg-background">
+    <section className="py-24 px-6 bg-background relative overflow-hidden">
+      {/* Confetti */}
+      {confetti.map((piece) => (
+        <motion.div
+          key={piece.id}
+          initial={{ x: `${piece.x}vw`, y: `${piece.y}vh`, rotate: 0, opacity: 1 }}
+          animate={{
+            y: "110vh",
+            x: `${piece.x + piece.drift}vw`,
+            rotate: piece.rotation + 720,
+            opacity: [1, 1, 0.8, 0],
+          }}
+          transition={{
+            duration: 2.5 + Math.random(),
+            delay: piece.delay,
+            ease: "easeIn",
+          }}
+          className="absolute z-50 pointer-events-none"
+          style={{
+            width: `${8 * piece.scale}px`,
+            height: `${12 * piece.scale}px`,
+            backgroundColor: piece.color,
+            borderRadius: "1px",
+          }}
+        />
+      ))}
+
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

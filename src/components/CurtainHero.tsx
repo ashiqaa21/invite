@@ -11,13 +11,45 @@ const CurtainHero = ({ onOpen }: { onOpen: () => void }) => {
 
   return (
     <section className="relative h-screen w-full overflow-hidden cursor-pointer" onClick={!isOpen ? handleOpen : undefined}>
-      {/* Left curtain */}
-      <div className={`absolute inset-0 w-1/2 left-0 z-10 ${isOpen ? "curtain-open-left" : ""}`}>
+      {/* Left curtain - folds to the left side */}
+      <div
+        className="absolute top-0 bottom-0 left-0 w-1/2 z-10 transition-all origin-left"
+        style={{
+          transform: isOpen ? "scaleX(0.15)" : "scaleX(1)",
+          transition: "transform 1.8s cubic-bezier(0.65, 0, 0.35, 1)",
+        }}
+      >
         <img src={curtainImg} alt="" className="w-full h-full object-cover" />
+        {/* Fold shadow overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: isOpen
+              ? "linear-gradient(to left, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0) 100%)"
+              : "none",
+            transition: "background 1.8s ease",
+          }}
+        />
       </div>
-      {/* Right curtain */}
-      <div className={`absolute inset-0 w-1/2 right-0 left-auto z-10 ${isOpen ? "curtain-open-right" : ""}`}>
+      {/* Right curtain - folds to the right side */}
+      <div
+        className="absolute top-0 bottom-0 right-0 w-1/2 z-10 transition-all origin-right"
+        style={{
+          transform: isOpen ? "scaleX(0.15)" : "scaleX(1)",
+          transition: "transform 1.8s cubic-bezier(0.65, 0, 0.35, 1)",
+        }}
+      >
         <img src={curtainImg} alt="" className="w-full h-full object-cover scale-x-[-1]" />
+        {/* Fold shadow overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            background: isOpen
+              ? "linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0) 100%)"
+              : "none",
+            transition: "background 1.8s ease",
+          }}
+        />
       </div>
       {/* Behind curtain content */}
       <div className="absolute inset-0 flex items-center justify-center bg-background z-0">
@@ -32,7 +64,7 @@ const CurtainHero = ({ onOpen }: { onOpen: () => void }) => {
       </div>
       {/* Tap hint */}
       {!isOpen && (
-        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 text-centro">
+        <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20">
           <p className="font-sans-elegant text-sm tracking-[0.3em] uppercase text-accent-foreground/80 animate-pulse">
             Tap to continue
           </p>
