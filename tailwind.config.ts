@@ -47,6 +47,18 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        teatro: {
+          cream: "hsl(var(--teatro-cream))",
+          ivory: "hsl(var(--teatro-ivory))",
+          green: "hsl(var(--teatro-green))",
+          "green-light": "hsl(var(--teatro-green-light))",
+          burgundy: "hsl(var(--teatro-burgundy))",
+          "burgundy-deep": "hsl(var(--teatro-burgundy-deep))",
+          gold: "hsl(var(--teatro-gold))",
+          "gold-light": "hsl(var(--teatro-gold-light))",
+          text: "hsl(var(--teatro-text))",
+          "text-light": "hsl(var(--teatro-text-light))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
