@@ -5,9 +5,6 @@ import DateReveal from "@/components/DateReveal";
 import Countdown from "@/components/Countdown";
 import VenueSection from "@/components/VenueSection";
 import MenuSection from "@/components/MenuSection";
-import DressCodeSection from "@/components/DressCodeSection";
-import GiftsSection from "@/components/GiftsSection";
-import TransportSection from "@/components/TransportSection";
 import RSVPSection from "@/components/RSVPSection";
 import ThankYouSection from "@/components/ThankYouSection";
 
@@ -29,9 +26,6 @@ const Index = () => {
             <Countdown />
             <VenueSection />
             <MenuSection />
-            <DressCodeSection />
-            <GiftsSection />
-            <TransportSection />
             <RSVPSection />
             <ThankYouSection />
           </motion.div>
