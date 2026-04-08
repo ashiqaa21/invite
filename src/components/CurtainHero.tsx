@@ -37,7 +37,7 @@ const CurtainHero = ({ onOpen }) => {
         <img
           src={curtainOpen}
           alt="Opened Curtain"
-          className="w-full h-full object-cover"
+          className="w-full h-full "
         />
         {/* Soft overlay to make text pop */}
         <div className="absolute inset-0 bg-black/10" />
