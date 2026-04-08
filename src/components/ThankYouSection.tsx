@@ -12,7 +12,7 @@ const ThankYouSection = () => {
       >
         <h2 className="font-display text-3xl md:text-4xl text-foreground mb-4">Thank You</h2>
         <p className="font-body text-lg text-muted-foreground">
-          For joining us on this special day. Your presence is the best gift we could receive.
+          Your presence is the best gift we could receive.
         </p>
       </motion.div>
     </section>

@@ -35,19 +35,19 @@ const MenuSection = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="block font-sans text-[10px] tracking-[0.5em] uppercase text-accent mb-6"
+            className="block font-sans text-[20px] tracking-[0.5em] uppercase text-accent mb-6"
           >
-            The Celebration Feast
+           بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ
           </motion.span>
 
           <motion.h2 
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6 }}
-            className="font-display text-4xl md:text-5xl text-foreground leading-[1.1] mb-6"
+            className=" italic font-serif font-body text-2xl md:text-xl text-muted-foreground leading-[1.1] mb-6"
           >
-            A Taste of <br />
-            <span className="italic font-serif">India</span>
+           In the name of Allah, the Most Gracious <br />
+            <span className="italic font-serif  font-body  "> the Most Merciful</span>
           </motion.h2>
 
           {/* Decorative Divider */}
@@ -64,20 +64,18 @@ const MenuSection = () => {
             transition={{ delay: 0.8 }}
             className="space-y-6"
           >
-            <p className="font-body text-base md:text-lg text-muted-foreground leading-relaxed px-2">
-              We invite you to share a celebratory dinner 
-              featuring seasonal flavors and traditional 
-              delicacies curated for this special evening.
+            <p className="font-display text-lg md:text-xl text-foreground leading-relaxed px-2">
+              We cordially invite you to the wedding of <br/>
+               Nazin M Rafeeq & Thaha Mohammad  
             </p>
 
             <div className="pt-6 border-t border-foreground/5">
               <p className="font-body text-xs text-foreground/60 uppercase tracking-[0.2em] mb-2">
-                Blessings & Shagun
+               DUAS & BLESSINGS
               </p>
               <p className="font-body text-sm text-muted-foreground italic leading-tight">
                 Your presence is our greatest gift. <br />
-                We kindly request no boxed gifts.
-              </p>
+                  Please keep us in your prayers              </p>
             </div>
           </motion.div>
         </div>

@@ -44,7 +44,7 @@ const VenueSection = () => {
           {/* Subtle location tag */}
           <div className="absolute bottom-4 right-4 md:-right-8 bg-background px-4 py-2 shadow-md border border-border">
             <p className="font-sans text-[10px] tracking-[0.2em] uppercase text-muted-foreground">
-              Tuscany, Italy
+              kodlipet
             </p>
           </div>
         </motion.div>
@@ -53,40 +53,43 @@ const VenueSection = () => {
         <motion.div variants={itemVariants} className="flex flex-col space-y-8">
           <div>
             <span className="font-sans text-xs tracking-[0.4em] uppercase text-accent mb-4 block">
-              The Celebration
+              The Celebration At
             </span>
-            <h2 className="font-display text-4xl md:text-6xl text-foreground leading-tight mb-4">
-              Villa Medicea <br /> 
-              <span className="italic font-serif pl-4">di Artimino</span>
+            <h2 className="font-display text-3xl md:text-5xl text-foreground leading-tight mb-4">
+              Noormahal  <br /> 
+              <span className="italic font-serif pl-4">Conventional hall</span>
             </h2>
             <div className="w-12 h-[1px] bg-foreground/30 mb-6" />
           </div>
 
           <div className="space-y-2">
-            <p className="font-body text-xl text-foreground/80">
-              Via di Papa Leone X, 28
-            </p>
+            {/* <p className="font-body text-2xl  text-foreground/90">
+             Save the Date
+            </p> */}
             <p className="font-body text-lg text-muted-foreground">
-              59015 Artimino, Carmignano (PO)
+             5 Dhul-Qa’dah 1447 AH
             </p>
           </div>
 
-          <div className="pt-6 flex flex-col sm:flex-row items-start sm:items-center gap-6">
-            <div className="bg-foreground text-background px-8 py-4 rounded-none">
-              <p className="font-display text-xl tracking-tight">September 10, 2027</p>
+          <div className=" block sm:flex-row items-start sm:items-center gap-6 ">
+                       <p className="font-body text-2xl mb-4  text-foreground/90">
+             Save the Date
+            </p>
+            <div className="bg-foreground text-background max-w-[200px] px-8 py-4 rounded-none">
+              <p className="font-display text-xl tracking-tight">April 22, 2026</p>
             </div>
-            <div>
+            {/* <div>
               <p className="font-body text-sm font-semibold text-foreground uppercase tracking-wider">
                 16:00 PM
               </p>
               <p className="font-body text-sm text-muted-foreground">
                 Reception to follow
               </p>
-            </div>
+            </div> */}
           </div>
 
           <motion.a
-            href="https://maps.google.com" // Update with actual Google Maps link
+            href="https://www.google.com/maps/place/Noor+Mahal+Convention+Hall/@12.791625,75.9006304,17z/data=!4m7!3m6!1s0x3ba53d55995ebaa7:0x3bcdd20137f52dae!4b1!8m2!3d12.7916198!4d75.9032053!16s%2Fg%2F11ddxcwqxz?entry=ttu&g_ep=EgoyMDI2MDQwNS4wIKXMDSoASAFQAw%3D%3D" // Update with actual Google Maps link
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ x: 5 }}

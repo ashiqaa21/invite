@@ -43,7 +43,7 @@ const RSVPSection = () => {
         className="max-w-md mx-auto"
       >
         <p className="font-sans-elegant text-[10px] tracking-[0.3em] uppercase text-center opacity-60 mb-2">
-          This form is fully customizable to your needs
+        
         </p>
         <h2 className="font-display text-3xl md:text-4xl text-center mb-8">
           Confirm your attendance

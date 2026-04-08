@@ -52,7 +52,7 @@ const CurtainHero = ({ onOpen }) => {
           className="text-center"
         >
           <h1 className="text-6xl md:text-8xl font-serif text-black drop-shadow-2xl">
-            Sam <span className="text-[#D4AF37]">&</span> Sofia
+            Nazin  <span className="text-[#D4AF37]">&</span>  Thaha
           </h1>
           <motion.div 
             initial={{ width: 0 }}
@@ -127,7 +127,7 @@ const CurtainHero = ({ onOpen }) => {
               />
               
               <div className="w-32 h-32 rounded-full border border-[#D4AF37]/50 bg-white backdrop-blur-xl flex flex-col items-center justify-center shadow-2xl">
-                <span className="text-[#D4AF37] text-3xl font-serif tracking-widest">S&S</span>
+                <span className="text-[#D4AF37] text-3xl font-serif tracking-widest">N&T</span>
                 <span className="text-[#D4AF37] text-[10px] mt-1 uppercase tracking-tighter">Click to Enter</span>
               </div>
             </motion.div>

@@ -64,7 +64,7 @@ const DateReveal = () => {
   }, [initCanvas]);
 
   const triggerConfetti = () => {
-    setConfetti(createConfetti(60));
+    setConfetti(createConfetti(100));
     setTimeout(() => setConfetti([]), 4000);
   };
 
@@ -154,13 +154,13 @@ const DateReveal = () => {
           {/* Date behind */}
           <div className="absolute inset-0 flex items-center justify-center gap-6 bg-secondary">
             <div className="text-center">
-              <span className="font-display text-5xl text-foreground">10</span>
+              <span className="font-display text-5xl text-foreground">22</span>
             </div>
             <div className="text-center">
-              <span className="font-display text-3xl text-foreground italic">Sept</span>
+              <span className="font-display text-3xl text-foreground italic">April</span>
             </div>
             <div className="text-center">
-              <span className="font-display text-5xl text-foreground">2027</span>
+              <span className="font-display text-5xl text-foreground">2026</span>
             </div>
           </div>
           {/* Scratch overlay */}
