@@ -35,7 +35,7 @@ const MenuSection = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
-            className="block font-sans text-[20px] tracking-[0.5em] uppercase text-accent mb-6"
+            className="block  text-[18px] md:text-[30px] md:tracking-[0.5em] uppercase text-accent mb-6"
           >
            بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيمِ
           </motion.span>
@@ -66,16 +66,18 @@ const MenuSection = () => {
           >
             <p className="font-display text-lg md:text-xl text-foreground leading-relaxed px-2">
               We cordially invite you to the wedding of <br/>
-               Nazin M Rafeeq & Thaha Mohammad  
+               <span className="text-base">
+                Nazin M Rafeeq & Thaha Mohammad  
+                </span>
             </p>
 
             <div className="pt-6 border-t border-foreground/5">
-              <p className="font-body text-xs text-foreground/60 uppercase tracking-[0.2em] mb-2">
+              <p className="font-body text-xs text-foreground/100 uppercase tracking-[0.2em] mb-2">
                DUAS & BLESSINGS
               </p>
               <p className="font-body text-sm text-muted-foreground italic leading-tight">
                 Your presence is our greatest gift. <br />
-                  Please keep us in your prayers              </p>
+                  Please keep us in your prayers</p>
             </div>
           </motion.div>
         </div>
