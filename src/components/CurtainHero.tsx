@@ -27,10 +27,13 @@ const CurtainHero = ({ onOpen }) => {
   };
 
   return (
-    <section
-      className="relative h-[600px] md:h-screen w-full overflow-hidden bg-neutral-900 cursor-pointer"
-      onClick={() => !isOpen && handleOpen()}
-    >
+ <motion.section
+  initial={{ height: "100dvh" }}
+  animate={{ height: isOpen ? "600px" : "100dvh" }}
+  transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+  className="relative w-full overflow-hidden bg-neutral-900 md:cursor-pointer"
+  onClick={() => !isOpen && handleOpen()}
+>
       {/* 1. UNDERLAY (The Final Look) */}
       {/* This stays hidden behind the closed curtains until they move */}
       <div className="absolute inset-0 z-0">
@@ -134,7 +137,7 @@ const CurtainHero = ({ onOpen }) => {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </motion.section>
   );
 };
 
