@@ -113,7 +113,7 @@ const DateReveal = () => {
   };
 
   return (
-    <section className="py-24 px-6 bg-background relative overflow-hidden">
+    <section className=" py-10 md:py-24 px-6 bg-background relative overflow-hidden">
       {/* Confetti */}
       {confetti.map((piece) => (
         <motion.div
@@ -150,7 +150,7 @@ const DateReveal = () => {
         <h2 className="font-display text-3xl md:text-4xl text-foreground mb-2">Reveal</h2>
         <p className="font-body text-lg text-muted-foreground mb-8">Scratch to discover the date</p>
 
-        <div className="relative w-72 h-32 mx-auto rounded-sm overflow-hidden">
+        <div className="relative w-[266px] h-20 md:w-72 md:h-32 mx-auto rounded-sm overflow-hidden">
           {/* Date behind */}
           <div className="absolute inset-0 flex items-center justify-center gap-6 bg-secondary">
             <div className="text-center">

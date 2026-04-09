@@ -20,7 +20,7 @@ const VenueSection = () => {
   };
 
   return (
-    <section className="relative py-24 md:py-32 px-6 bg-[#FAF9F6]">
+    <section className="relative py-10 md:py-32 px-6 bg-[#FAF9F6]">
       <motion.div
         variants={containerVariants}
         initial="hidden"
@@ -50,7 +50,7 @@ const VenueSection = () => {
         </motion.div>
 
         {/* Right Side: Details */}
-        <motion.div variants={itemVariants} className="flex flex-col space-y-8">
+        <motion.div variants={itemVariants} className="flex flex-col space-y-4">
           <div>
             <span className="font-sans text-xs tracking-[0.4em] uppercase text-accent mb-4 block">
               The Celebration At
@@ -93,7 +93,7 @@ const VenueSection = () => {
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ x: 5 }}
-            className="inline-flex items-center text-sm font-body border-b border-foreground/20 pb-1 w-fit mt-4 hover:border-foreground transition-colors"
+            className="inline-flex px-20 md:px-0 items-center text-sm font-body border-b border-foreground/20 pb-1 w-fit mt-4 hover:border-foreground transition-colors"
           >
             Open in Google Maps
             <svg 

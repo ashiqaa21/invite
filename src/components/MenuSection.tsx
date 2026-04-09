@@ -3,7 +3,7 @@ import menuFrame from "@/assets/menu-frame.png";
 
 const MenuSection = () => {
   return (
-    <section className="relative py-28 px-6 overflow-hidden">
+    <section className="relative py-7 md:py-28 px-6 overflow-hidden">
       {/* Enhanced Background: Paper Texture + Subtle Gradient */}
       <div className="absolute inset-0 bg-[#FAF9F6]" />
       <div 

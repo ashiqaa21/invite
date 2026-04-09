@@ -31,7 +31,7 @@ const Countdown = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-primary text-primary-foreground">
+    <section className="py-10 md:py-20 px-6 bg-primary text-primary-foreground">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

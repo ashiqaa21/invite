@@ -28,7 +28,7 @@ const CurtainHero = ({ onOpen }) => {
 
   return (
     <section
-      className="relative h-screen w-full overflow-hidden bg-neutral-900 cursor-pointer"
+      className="relative h-[600px] md:h-screen w-full overflow-hidden bg-neutral-900 cursor-pointer"
       onClick={() => !isOpen && handleOpen()}
     >
       {/* 1. UNDERLAY (The Final Look) */}
@@ -51,7 +51,7 @@ const CurtainHero = ({ onOpen }) => {
           transition={{ delay: 0.6, duration: 1.5 }}
           className="text-center"
         >
-          <h1 className="text-6xl md:text-8xl font-serif text-black drop-shadow-2xl">
+          <h1 className="text-4xl md:text-8xl font-serif text-black drop-shadow-2xl">
             Nazin  <span className="text-[#D4AF37]">&</span>  Thaha
           </h1>
           <motion.div 

@@ -5,7 +5,6 @@ import DateReveal from "@/components/DateReveal";
 import Countdown from "@/components/Countdown";
 import VenueSection from "@/components/VenueSection";
 import MenuSection from "@/components/MenuSection";
-import RSVPSection from "@/components/RSVPSection";
 import ThankYouSection from "@/components/ThankYouSection";
 
 const Index = () => {
@@ -23,10 +22,9 @@ const Index = () => {
             transition={{ duration: 1, delay: 0.3 }}
           >
             <DateReveal />
-            <Countdown />
             <VenueSection />
+            <Countdown />
             <MenuSection />
-            <RSVPSection />
             <ThankYouSection />
           </motion.div>
         )}
